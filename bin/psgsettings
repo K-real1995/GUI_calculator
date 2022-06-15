@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/home/kirill/Рабочий стол/Java-python практика/Витте/gui_calc/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from PySimpleGUI.PySimpleGUI import main_global_pysimplegui_settings
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main_global_pysimplegui_settings())
